@@ -14,10 +14,10 @@ public class BulletSpawner : MonoBehaviour
 
     private float[] angles =
     {
-        -67.5f,
-        -22.5f,
-         22.5f,
-         67.5f
+        -15f,
+        -5f,
+         5f,
+         15f
     };
 
     void Update()
