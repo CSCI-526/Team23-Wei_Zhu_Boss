@@ -13,10 +13,10 @@ public class ShieldController : MonoBehaviour
     // 这里改成球的“上半边”
     private float[] angles =
     {
-        292.5f,   // D
-        337.5f,   // F
-        22.5f,   // J
-        67.5f     // K
+        -15f,   // D
+        -5f,   // F
+        5f,   // J
+        15f     // K
     };
 
     void Start()
