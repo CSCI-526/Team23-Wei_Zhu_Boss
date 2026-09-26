@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     private Vector3 target;
     private float speed;
+    private bool hasResolved;
 
     public void Initialize(Vector3 targetPosition, float bulletSpeed)
     {
@@ -25,5 +26,27 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (hasResolved)
+            return;
+
+        if (other.CompareTag("Shield"))
+        {
+            ResolveHit();
+        }
+        else if (other.CompareTag("Core"))
+        {
+            ResolveHit();
+            LivesManager.Instance?.LoseLife();
+        }
+    }
+
+    private void ResolveHit()
+    {
+        hasResolved = true;
+        Destroy(gameObject);
     }
 }
