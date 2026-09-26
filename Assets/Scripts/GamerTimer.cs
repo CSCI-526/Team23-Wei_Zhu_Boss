@@ -33,7 +33,7 @@ public class GameTimer : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        timerText.text = Mathf.CeilToInt(timeRemaining).ToString();
+        timerText.text = $"Time Left: {Mathf.CeilToInt(timeRemaining)}";
     }
 
     void EndGame()
