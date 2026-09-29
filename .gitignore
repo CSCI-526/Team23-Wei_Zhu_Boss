@@ -7,6 +7,10 @@
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 
+# Keep the generated WebGL player used by GitHub Pages.
+!docs/Build/
+!docs/Build/**
+
 # Memory captures
 [Mm]emoryCaptures/
 
