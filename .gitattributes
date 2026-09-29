@@ -169,3 +169,6 @@ Packages/packages-lock.json linguist-generated
 
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
+
+# GitHub Pages must receive the actual WebGL files, not Git LFS pointers.
+docs/**                 -filter -diff -merge
